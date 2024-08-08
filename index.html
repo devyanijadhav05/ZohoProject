@@ -1,0 +1,154 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Employee Leave Management Dashboard</title>
+    <style>
+        @import url('https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&display=swap');
+
+        body {
+            margin: 0;
+            padding: 0;
+            font-family: 'Roboto', sans-serif;
+            background: #f0f0f0; /* Stable background */
+        }
+
+        .dashboard {
+            max-width: 900px;
+            margin: 30px auto;
+            padding: 40px;
+            background: rgba(255, 255, 255, 0.9);
+            border-radius: 12px;
+            box-shadow: 0 6px 12px rgba(0, 0, 0, 0.1);
+            backdrop-filter: blur(8px);
+        }
+
+        header {
+            background: linear-gradient(90deg, #4caf50, #81c784);
+            color: white;
+            padding: 20px;
+            border-radius: 12px;
+            text-align: center;
+            margin: -40px -40px 30px -40px;
+            box-shadow: 0 6px 12px rgba(0, 0, 0, 0.1);
+        }
+
+        header h1 {
+            font-size: 28px;
+            margin: 0;
+        }
+
+        .search-bar {
+            margin-bottom: 30px;
+            text-align: center;
+        }
+
+        .search-bar input {
+            padding: 15px;
+            width: 100%;
+            max-width: 600px;
+            border: none;
+            border-radius: 30px;
+            box-shadow: 0 3px 7px rgba(0, 0, 0, 0.1);
+            font-size: 18px;
+            outline: none;
+            transition: box-shadow 0.3s ease;
+        }
+
+        .search-bar input:focus {
+            box-shadow: 0 5px 12px rgba(0, 0, 0, 0.2);
+        }
+
+        table {
+            width: 100%;
+            border-collapse: collapse;
+            margin-bottom: 40px;
+        }
+
+        table th, table td {
+            padding: 20px;
+            border: 1px solid #ddd;
+            text-align: left;
+            border-radius: 6px;
+        }
+
+        table th {
+            background: linear-gradient(135deg, #4caf50, #81c784);
+            color: white;
+            font-weight: 700;
+            font-size: 18px;
+        }
+
+        table tbody tr:nth-child(even) {
+            background: #f9f9f9;
+        }
+
+        table tbody tr:nth-child(odd) {
+            background: #ffffff;
+        }
+
+        .submit-button {
+            display: block;
+            width: 100%;
+            max-width: 240px;
+            margin: 0 auto;
+            padding: 15px;
+            background: linear-gradient(135deg, #4caf50, #81c784);
+            color: white;
+            border: none;
+            border-radius: 30px;
+            font-size: 20px;
+            cursor: pointer;
+            box-shadow: 0 6px 12px rgba(0, 0, 0, 0.1);
+            transition: background 0.3s ease, transform 0.3s ease;
+        }
+
+        .submit-button:hover {
+            background: linear-gradient(135deg, #81c784, #4caf50);
+            transform: translateY(-2px);
+        }
+
+        .submit-button:active {
+            transform: translateY(1px);
+        }
+    </style>
+</head>
+<body>
+    <div class="dashboard">
+        <header>
+            <h1>Employee Leave Management Dashboard</h1>
+        </header>
+        <div class="search-bar">
+            <input type="text" placeholder="Search by name...">
+        </div>
+        <table>
+            <thead>
+                <tr>
+                    <th>Employee Name</th>
+                    <th>Department</th>
+                    <th>Leave Business</th>
+                    <th>Applied Leave (Current Month)</th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr>
+                    <td>John Doe</td>
+                    <td>Marketing</td>
+                    <td>Personal</td>
+                    <td>2 days</td>
+                </tr>
+                <tr>
+                    <td>Jane Smith</td>
+                    <td>HR</td>
+                    <td>Sick</td>
+                    <td>1 day</td>
+                </tr>
+            </tbody>
+        </table>
+        <a href="submit-leave.html">
+            <button class="submit-button">Submit New Leave Request</button>
+        </a>
+    </div>
+</body>
+</html>
